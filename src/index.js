@@ -4,12 +4,23 @@ import './index.css';
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
 import reportWebVitals from './reportWebVitals';
-import { applyMiddleware, createStore } from 'redux'
+import { applyMiddleware, compose, createStore } from 'redux'
 import rootReducer from './store/reducers/rootReducer'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk';
+import { getFirestore } from 'firebase/firestore';
+import { getFirebase, reactReduxFirebase } from 'react-redux-firebase';
+import fbConfig from './config/fbConfig'
+import { reduxFirestore } from 'redux-firestore';
+import firebase from '@firebase/app-compat';
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = createStore(rootReducer,
+  compose(
+    applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
+    reduxFirestore(fbConfig, firebase),
+    reactReduxFirebase(fbConfig, firebase)
+  )
+);
 
 ReactDOM.render(
   // <React.StrictMode>
