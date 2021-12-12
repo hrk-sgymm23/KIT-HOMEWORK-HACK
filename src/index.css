@@ -20,17 +20,40 @@ body {
   padding: 0rem;
   /* font-family: sans-serif; */
   /* background-color: #95e8f3; */
-  background-color: lightgray;
+  background-color: #67ffd9;
   min-height: 100%;
 }
 
 form {
   padding: 20px;
   margin-top: 60px;
+
 }
 
 form button, form h5 {
+  padding: 0.5em 1em;
   margin: 20px 0;
+  background: -moz-linear-gradient(#ffb03c, #ff708d);
+  background: -webkit-linear-gradient(#ffb03c, #ff708d);
+  background: linear-gradient(to right, #ffb03c, #ff708d);
+  color: #FFF;
+}
+
+  form {
+  padding: 0.5em 1em;
+  margin: 20px 0;
+  background: #f4f4f4;
+  border-left: solid 6px #5bb7ae;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+}
+
+p{
+  position: relative;
+  background: #fff0cd;
+  box-shadow: 0px 0px 0px 5px #fff0cd;
+  border: dashed 2px white;
+  padding: 0.2em 0.5em;
+  color: #454545;
 }
 
 input[type=text]:not(.browser-default):focus:not([readonly]),
