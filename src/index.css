@@ -47,7 +47,7 @@ form button, form h5 {
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
 }
 
-p{
+.Thread {
   position: relative;
   background: #fff0cd;
   box-shadow: 0px 0px 0px 5px #fff0cd;
